@@ -1,0 +1,10 @@
+source {
+    FakeSource {
+      fieldName = "name,age"
+    }
+}
+
+sink {
+    PrintSink {
+    }
+}
