@@ -58,6 +58,13 @@
             </excludes>
         </fileSet>
         <fileSet>
+            <directory>${project.parent.basedir}/examples/</directory>
+            <outputDirectory>${assembly.name}/examples/</outputDirectory>
+            <includes>
+                <include>*.conf</include>
+            </includes>
+        </fileSet>
+        <fileSet>
             <directory>${project.parent.basedir}/flow-fake-plugin/target/</directory>
             <outputDirectory>${assembly.name}/plugins/fake</outputDirectory>
             <includes>
@@ -68,11 +75,14 @@
             </excludes>
         </fileSet>
         <fileSet>
-            <directory>${project.parent.basedir}/examples/</directory>
-            <outputDirectory>${assembly.name}/examples/</outputDirectory>
+            <directory>${project.parent.basedir}/flow-jdbc-plugin/target/</directory>
+            <outputDirectory>${assembly.name}/plugins/jdbc</outputDirectory>
             <includes>
-                <include>*.conf</include>
+                <include>*.jar</include>
             </includes>
+            <excludes>
+                <exclude>original-flow-jdbc-plugin*.jar</exclude>
+            </excludes>
         </fileSet>
     </fileSets>
 </assembly>
